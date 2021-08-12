@@ -48,11 +48,11 @@ export default function Map() {
     <MapStyles>
       <div className="container">
         <div className="map__card">
-          <h3 className="map__card__heading">Here is me</h3>
-          <PText>GEC circle, Chittagong, Bangladesh</PText>
+          <h3 className="map__card__heading">My location</h3>
+          <PText>South Jakarta, Indonesia</PText>
           <a
             className="map__card__link"
-            href="https://www.google.com/maps/place/GEC+More,+Chittagong/@22.3590818,91.8195583,17z/data=!3m1!4b1!4m5!3m4!1s0x30acd89aaa8239cd:0x6e65fa00001dd59f!8m2!3d22.3590715!4d91.8215486"
+            href="https://www.google.com/maps/place/Gg.+Madrasah,+RW.1,+Rawajati,+Kec.+Pancoran,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12750/@-6.2581953,106.8573756,17z/data=!4m5!3m4!1s0x2e69f253178f5c2d:0x3cedde42771ff3b3!8m2!3d-6.2586646!4d106.8572039?hl=id"
             target="_blank"
             rel="noreferrer"
           >

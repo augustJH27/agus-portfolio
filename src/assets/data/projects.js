@@ -1,45 +1,61 @@
 import { v4 as uuidv4 } from 'uuid';
-import ProjectImg from '../images/projectImg.png';
-import UTrackerImg from '../images/utracker.jpg';
-import GreenCtgImg from '../images/greenctg.jpg';
-import CoinTrackerImg from '../images/cointracker.jpg';
-import CavinImg from '../images/cavinimg.jpg';
+import MilanTV from '../images/milantv.png';
+import Audiophile from '../images/audiophile.png';
+import Clock from '../images/clockapp.png';
+import Motorcycle from '../images/motorcycle.png';
+import WeShare from '../images/weshare.png';
+import Snake from '../images/snake.png';
+import Todo from '../images/todo.png';
 
 const projects = [
   {
     id: uuidv4(),
-    name: 'U Tracker',
+    name: "WeShare Website",
     desc:
-      'An application to track your all data from one place. I developed the website and the mobile app',
-    img: UTrackerImg,
+      'A crowdfunding website which allows user to be a donator and charity-funder. This project was made during my study time at Binar Academy. Website: https://weshare-app.netlify.app/',
+    img: WeShare,
   },
   {
     id: uuidv4(),
-    name: 'Green CTG',
+    name: "Audiophile Website",
     desc:
-      'An app to help people to get an overview of how they can make the city beautiful.',
-    img: GreenCtgImg,
+      'This is an e-Commerce website look-alike which focusing itself to sell audio stuffs only. Website: https://audiophile-glints.netlify.app/',
+    img: Audiophile,
   },
   {
     id: uuidv4(),
-    name: 'Coin Tracker',
+    name: "Milan TV",
     desc:
-      'Using this app you can track any e coin. Also you will get a good advise about investment form the professional',
-    img: CoinTrackerImg,
+      'A movie website with Netflix vibe where user can browse and see the latest movie. This project was my mini-project at Binar Academy. Website: https://milantv-team-f.netlify.app/',
+    img: MilanTV,
   },
   {
     id: uuidv4(),
-    name: "Cavin's Portfolio",
+    name: "Digital Clock App",
     desc:
-      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
-    img: CavinImg,
+      'A simple digital clock app which made using HTML, CSS, and Vanilla Javascript only. Website: https://augustjh27.github.io/clock-app/',
+    img: Clock,
   },
   {
     id: uuidv4(),
-    name: 'Tracking Soft',
+    name: "Motorcycle Mini Game",
     desc:
-      'A tracking website that will show the performance of the website. Also you will get some useful advice to improve the performance.',
-    img: ProjectImg,
+      'Press arrow up to full speed, arrow down to low speed. I made this project during my free time. Website: https://augustjh27.github.io/motorcycle-game/',
+    img: Motorcycle,
+  },
+  {
+    id: uuidv4(),
+    name: "Todo List App",
+    desc:
+      'During my study time in Binar Academy, I had a chance to create this todo-app as a home-assignment. Website: https://todo-app-glints.netlify.app',
+    img: Todo,
+  },
+  {
+    id: uuidv4(),
+    name: "Snake Game Nokia",
+    desc:
+      'Miss the legendary Snake Game on your old Nokia phone? Try this game! Website: https://augustjh27.github.io/old-snake-game/',
+    img: Snake,
   },
 ];
 
