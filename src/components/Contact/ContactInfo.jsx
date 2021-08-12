@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdPlace } from 'react-icons/md';
 import styled from 'styled-components';
-import PText from './PText';
+import PText from '../PText/PText';
 
 const ItemStyles = styled.div`
   padding: 2rem;

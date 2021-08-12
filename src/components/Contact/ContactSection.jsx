@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { MdEmail, MdLocalPhone } from 'react-icons/md';
 import ContactForm from './ContactForm';
-import ContactInfoItem from './ContactInfoItem';
-import SectionTitle from './SectionTitle';
+import ContactInfoItem from './ContactInfo';
+import SectionTitle from '../Section/SectionTitle';
 
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;

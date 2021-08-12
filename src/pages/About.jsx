@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import PText from '../components/PText';
-import Button from '../components/Button';
+import PText from '../components/PText/PText';
+import Button from '../components/Button/Button';
 import AboutImg from '../assets/images/about-page-img.png';
-import AboutInfoItem from '../components/AboutInfoItem';
-import ContactBanner from '../components/ContactBanner';
+import AboutInfoItem from '../components/About/AboutInfo';
+import ContactBanner from '../components/Contact/ContactBanner';
 
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;

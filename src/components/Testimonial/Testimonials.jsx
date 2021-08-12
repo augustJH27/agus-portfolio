@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { MdArrowForward, MdArrowBack } from 'react-icons/md';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
-import PText from './PText';
-import SectionTitle from './SectionTitle';
-import testimonials from '../assets/data/testimonials';
+import PText from '../PText/PText';
+import SectionTitle from '../Section/SectionTitle';
+import testimonials from '../../assets/data/Testimonies';
 
 const TestimonialSectionStyles = styled.div`
   overflow-x: hidden;

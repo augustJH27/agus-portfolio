@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import MapImg from '../assets/images/map.png';
-import PText from './PText';
+import MapImg from '../../assets/images/map.png';
+import PText from '../PText/PText';
 
 const MapStyles = styled.div`
   background: url(${MapImg}) no-repeat;

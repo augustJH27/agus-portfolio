@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/images/hero.png';
-import Button from './Button';
-import PText from './PText';
+import HeroImg from '../../assets/images/hero.png';
+import Button from '../Button/Button';
+import PText from '../PText/PText';
 
 const HeroStyles = styled.div`
   .hero {

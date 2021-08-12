@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
-import SectionTitle from '../components/SectionTitle';
-import ProjectsInfo from '../assets/data/projects';
-import ProjectItem from '../components/ProjectItem';
+import SectionTitle from '../components/Section/SectionTitle';
+import ProjectsInfo from '../assets/data/Project';
+import ProjectItem from '../components/Project/ProjectItem';
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
