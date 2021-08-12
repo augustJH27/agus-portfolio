@@ -9,18 +9,19 @@ const GlobalStyles = createGlobalStyle`
   :root{
     --dark-bg: #ffffff;
     //putih
-    --gray-1: #0896fb;
+    --gray-1: #007965;
     //biru kalem
     --deep-dark: #96d3c9;
     //teal
     --gray-2: #66b3e4;
     //biru pucat
+    --myth-0: #f1e8e8;
     --white : white;
-    --black: red;
+    --black: black;
   }
   html{
     font-size: 10px;
-    font-family: 'Roboto Mono';
+    font-family: 'Poppins Regular';
     background-color: var(--dark-bg);
   }
   ul,li{

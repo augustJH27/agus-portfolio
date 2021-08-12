@@ -26,7 +26,7 @@ const NavStyles = styled.nav`
     }
     a {
       display: inline-block;
-      font-family: 'RobotoMono Regular';
+      font-family: 'Poppins Medium';
       padding: 1rem 2rem;
       font-size: 2rem;
       color: var(--gray-1);

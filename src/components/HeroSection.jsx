@@ -151,7 +151,7 @@ export default function HeroSection() {
       <div className="hero">
         <div className="container">
           <h1 className="hero__heading">
-            <span>Hello, This is</span>
+            <span>Hello, this is</span>
             <span className="hero__name">Agus Zohari</span>
           </h1>
           <div className="hero__img">
@@ -160,7 +160,7 @@ export default function HeroSection() {
           <div className="hero__info">
             <PText>
               An Introvert guy who has been passionately in love with building
-              responsive website ever since he joined online coding bootcamp.
+              responsive website ever since he joined online coding Bootcamp.
               Check what he's been working on by clicking this button below.
             </PText>
             <Button btnText="see my works" btnLink="/projects" />

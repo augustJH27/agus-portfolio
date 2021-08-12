@@ -110,25 +110,6 @@ export default function Footer() {
             ]}
           />
         </div>
-        {/* <div className="footer__col4">
-          <FooterCol
-            heading="social Links"
-            links={[
-              {
-                title: 'Facebook',
-                path: 'http://facebook.com',
-              },
-              {
-                title: 'Twitter',
-                path: 'http://twitter.com',
-              },
-              {
-                title: 'Instagram',
-                path: 'http://instagram.com',
-              },
-            ]}
-          />
-        </div> */}
       </div>
       <div className="copyright">
         <div className="container">

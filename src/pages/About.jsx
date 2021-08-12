@@ -81,29 +81,37 @@ export default function About() {
           <div className="top-section">
             <div className="left">
               <p className="about__subheading">
-                Hi, I am <span>Agus Zohari</span>
+                Bonjour! My name is <span>Agus Zohari</span>
               </p>
-              <h2 className="about__heading">A freelance Web developer</h2>
+              <h2 className="about__heading">Junior Front End Developer</h2>
               <div className="about__info">
                 <PText>
-                  I am from chittagong, Bangladesh. A place of beauty and
-                  nature. Since my childhood, i love art and design. I always
-                  try to design stuff with my unique point of view. I also love
-                  to create things that can be usefull to others.
+                  I live in Jakarta, Indonesia, the city where everyone lives
+                  in one building — they say. Since I was a kid, I knew that
+                  art has been my very first love. I started loving art by
+                  reading a book, writing poems, drawing and sketching. By the
+                  time I was teen, I found that tech stuff has pulled me to
+                  learn more about it.
                   <br /> <br />
+                  I started learning coding in March 2021. It was the moment when
+                  I watched this video on YouTube, since then I felt the urged to
+                  learn how to build my own website. Following this, I joined an
+                  online coding Bootcamp named Binar x Glints Academy. I chose
+                  Front End Class since I had found it really interesting and I
+                  wanted to enjoy the process of learning something new.
                   I started coding since I was in high school. Coding is also an
                   art for me. I love it and now I have the opportunity to design
                   along with the coding. I find it really interesting and I
                   enjoyed the process a lot.
                   <br />
                   <br />
-                  My vision is to make the world a better place. Now almost
-                  everything is becoming better than ever. It is time for us to
-                  create more good stuff that helps the world to become a better
-                  place.
+                  Every now and then I have become interested in web development. 
+                  I realised that coding is a piece of art. In the next future, I 
+                  want to become a talented Web Debeloper and make something greater
+                  than things ever exist. 
                 </PText>
               </div>
-              <Button btnText="Download CV" btnLink="#" />
+              <Button btnText="Download CV" btnLink="/https://drive.google.com/drive/u/1/folders/1WoOT1ZBgBtyqhmwCw32m1BWMaMJ784ZA" />
             </div>
             <div className="right">
               <img src={AboutImg} alt="me" />
@@ -115,15 +123,15 @@ export default function About() {
 
               <AboutInfoItem
                 title="Bootcamp"
-                items={['Binar x Glints Academy Coding Bootcamp']}
+                items={['Front End Developer Class at Binar Academy']}
               />
               <AboutInfoItem
-                title="College"
+                title="University"
                 items={['Indonesia Open University']}
               />
               <AboutInfoItem
-                title="Varsity"
-                items={['University Of Chitiagong']}
+                title="High School"
+                items={['Multimedia and Graphic Design']}
               />
             </div>
             <div className="about__info__item">
@@ -133,26 +141,28 @@ export default function About() {
                 title="Front End"
                 items={['HTML', 'CSS', 'JavaScript', 'ReactJS']}
               />
-              <AboutInfoItem title="Web Design" items={['Figma']} />
+              <AboutInfoItem 
+              title="Tools" 
+              items={['Figma', 'Trello', 'Jira']} />
               <AboutInfoItem
                 title="Graphic"
-                items={['PhotoShop', 'Illustrator', 'After Effects']}
+                items={['PhotoShop', 'Illustrator', 'Lightroom']}
               />
             </div>
             <div className="about__info__item">
               <h1 className="about__info__heading">Experiences</h1>
 
               <AboutInfoItem
-                title="2010-2012"
-                items={['junior developer at web Cifar']}
+                title="2021-present"
+                items={['Junior Front End Developer']}
               />
               <AboutInfoItem
-                title="2012-2016"
-                items={['Front end developer at web Cifar ']}
+                title="2018-2021"
+                items={['Freelance Content & Copy Writer']}
               />
               <AboutInfoItem
-                title="2016-"
-                items={['Freelance web Developer']}
+                title="2014-2019"
+                items={['Personal Financial Assistant']}
               />
             </div>
           </div>
