@@ -24,7 +24,7 @@ const HeroStyles = styled.div`
       width: 100%;
     }
     .hero__name {
-      font-family: 'Montserrat SemiBold';
+      font-family: 'Parisienne Regular';
       font-size: 7rem;
       color: var(--red);
     }
