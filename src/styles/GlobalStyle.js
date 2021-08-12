@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     //biru kalem
     --deep-dark: #96d3c9;
     //teal
-    --gray-2: #66b3e4;
+    --gray-2: #00af91;
     //biru pucat
     --myth-0: #f1e8e8;
     --white : white;

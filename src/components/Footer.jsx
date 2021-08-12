@@ -113,12 +113,6 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          {/* <PText>
-            © 2021 - Agus Zohari | Designed By{' '}
-            <a target="_blank" rel="noreferrer" href="http://webcifar.com">
-              web cifar
-            </a>{' '}
-          </PText> */}
         </div>
       </div>
     </FooterStyle>

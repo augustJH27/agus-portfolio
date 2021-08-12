@@ -93,25 +93,21 @@ export default function About() {
                   time I was teen, I found that tech stuff has pulled me to
                   learn more about it.
                   <br /> <br />
-                  I started learning coding in March 2021. It was the moment when
-                  I watched this video on YouTube, since then I felt the urged to
-                  learn how to build my own website. Following this, I joined an
-                  online coding Bootcamp named Binar x Glints Academy. I chose
+                  I began learning coding in March 2021. It was the moment when
+                  I was watching a video on YouTube, since then I felt the urged
+                  to learn how to build my own website. Following this, I joined
+                  an online coding Bootcamp named Binar x Glints Academy. I chose
                   Front End Class since I had found it really interesting and I
                   wanted to enjoy the process of learning something new.
-                  I started coding since I was in high school. Coding is also an
-                  art for me. I love it and now I have the opportunity to design
-                  along with the coding. I find it really interesting and I
-                  enjoyed the process a lot.
                   <br />
                   <br />
                   Every now and then I have become interested in web development. 
                   I realised that coding is a piece of art. In the next future, I 
-                  want to become a talented Web Debeloper and make something greater
+                  want to become a talented Web Developer and make something greater
                   than things ever exist. 
                 </PText>
               </div>
-              <Button btnText="Download CV" btnLink="/https://drive.google.com/drive/u/1/folders/1WoOT1ZBgBtyqhmwCw32m1BWMaMJ784ZA" />
+              <Button btnText="Want to talk?" btnLink='/contact' />
             </div>
             <div className="right">
               <img src={AboutImg} alt="me" />
