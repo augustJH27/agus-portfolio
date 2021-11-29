@@ -25,7 +25,6 @@ const FooterStyle = styled.div`
   .copyright {
     background-color: var(--dark-bg);
     text-align: left;
-    padding: 1rem 0;
     margin-top: 5rem;
     .para {
       margin-left: 0;
