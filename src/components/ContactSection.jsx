@@ -58,9 +58,15 @@ export default function ContactSection() {
         <SectionTitle heading="contact" subheading="how to reach me" />
         <div className="contactSection__wrapper">
           <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text="(+62)81274413945" />
-            <ContactInfoItem icon={<MdEmail />} text="aguszohari@gmail.com" />
-            <ContactInfoItem text="South Jakarta, Indonesia" />
+            <a href='tel:(+62)81274413945'>
+              <ContactInfoItem icon={<MdLocalPhone />} text="(+62)81274413945" />
+            </a>
+            <a href='mailto:aguszohari@gmail.com'>
+              <ContactInfoItem icon={<MdEmail />} text="aguszohari@gmail.com" />
+            </a>
+            <a target='_blank' href='https://www.google.com/maps/place/Jl.+Jend.+Sudirman+No.199,+Cibadak,+Kec.+Astanaanyar,+Kota+Bandung,+Jawa+Barat+40241/@-6.9202143,107.5951835,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e61870e8b4f7:0x7a815b1ca33a507a!8m2!3d-6.9202196!4d107.5973722?hl=id'>
+              <ContactInfoItem text="Bandung, West Java, Indonesia" />
+            </a>
           </div>
           <div className="right">
             <ContactForm />

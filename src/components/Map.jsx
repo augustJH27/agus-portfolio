@@ -52,7 +52,7 @@ export default function Map() {
           <PText>South Jakarta, Indonesia</PText>
           <a
             className="map__card__link"
-            href="https://www.google.com/maps/place/Gg.+Madrasah,+RW.1,+Rawajati,+Kec.+Pancoran,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12750/@-6.2581953,106.8573756,17z/data=!4m5!3m4!1s0x2e69f253178f5c2d:0x3cedde42771ff3b3!8m2!3d-6.2586646!4d106.8572039?hl=id"
+            href="https://www.google.com/maps/place/Jl.+Jend.+Sudirman+No.199,+Cibadak,+Kec.+Astanaanyar,+Kota+Bandung,+Jawa+Barat+40241/@-6.9202143,107.5951835,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e61870e8b4f7:0x7a815b1ca33a507a!8m2!3d-6.9202196!4d107.5973722?hl=id"
             target="_blank"
             rel="noreferrer"
           >

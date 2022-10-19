@@ -7,13 +7,61 @@ import WeShare from '../images/weshare.png';
 import Snake from '../images/snake.png';
 import Todo from '../images/todo.png';
 import MyOwnWater from '../images/project-myownwater.png';
+import WealthBridge from '../images/project-wealthbridge.png';
+import Pinduoduo from '../images/project-pdd.png';
+import KliknClean from '../images/project-kliknclean.png';
+import Alkimiya from '../images/project-alkimiya.png';
+import SpacePlace from '../images/project-spaceplace.png';
+import Explo from '../images/project-explo.png';
 
 const projects = [
   {
     id: uuidv4(),
+    name: 'Explo',
+    desc:
+      <div>Innovative companies use Explo to share data and insights with their customers. Migrate from your current embedded solution to Explo in minutes. <a target='_blank' href='https://www.explo.co/'>Website: https://www.explo.co/</a></div>,
+    img: Explo,
+  },
+  {
+    id: uuidv4(),
+    name: 'SpacePlace',
+    desc:
+      <div>Make your entire space shoppable with SpacePlace. <a target='_blank' href='https://www.spaceplace.info/'>Website: https://www.spaceplace.info/</a></div>,
+    img: SpacePlace,
+  },
+  {
+    id: uuidv4(),
+    name: 'Alkimiya',
+    desc:
+      <div>Alkimiya is a permissionless protocol that makes the economics of the Blockspace accessible to the broader DeFi universe. <a target='_blank' href='https://alkimiya-dev.webflow.io/'>Website: https://alkimiya-dev.webflow.io/</a></div>,
+    img: Alkimiya,
+  },
+  {
+    id: uuidv4(),
+    name: 'KliknClean',
+    desc:
+      <div>KliknClean merupakan jasa kebersihan one stop solution yang bertujuan untuk memudahkan pelanggan dalam pembersihan rumah, apartemen, kamar kos, maupun kantor. <a target='_blank' href='https://www.kliknclean.com/'>Website: https://www.kliknclean.com/</a></div>,
+    img: KliknClean,
+  },
+  {
+    id: uuidv4(),
+    name: 'Pinduoduo ESG Microsite',
+    desc:
+      <div>Pinduoduo is a mobile-only marketplace that connects millions of agricultural producers with consumers across China. <a target='_blank' href='https://pinduoduo-esg-microsite.webflow.io/'>Website: https://pinduoduo-esg-microsite.webflow.io/</a></div>,
+    img: Pinduoduo,
+  },
+  {
+    id: uuidv4(),
+    name: 'WealthBridge Corporate Services',
+    desc:
+      <div>WealthBridge is a team of professionals who believe in using technology to deliver accurate yet cost effective solutions! <a target='_blank' href='https://www.wealthbridgecs.com/'>Website: https://www.wealthbridgecs.com/</a></div>,
+    img: WealthBridge,
+  },
+  {
+    id: uuidv4(),
     name: "My Own Water Website",
     desc:
-      <div>'Private Label Water and Custom Label Bottled Water A Mini Billboard in Your Hand! <a target='_blank' href='https://www.myownwater.com/'>Website: https://www.myownwater.com/</a></div>,
+      <div>Private Label Water and Custom Label Bottled Water A Mini Billboard in Your Hand! <a target='_blank' href='https://www.myownwater.com/'>Website: https://www.myownwater.com/</a></div>,
     img: MyOwnWater,
   },
   {
