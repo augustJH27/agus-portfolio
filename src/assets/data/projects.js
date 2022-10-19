@@ -6,8 +6,16 @@ import Motorcycle from '../images/motorcycle.png';
 import WeShare from '../images/weshare.png';
 import Snake from '../images/snake.png';
 import Todo from '../images/todo.png';
+import MyOwnWater from '../images/project-myownwater.png';
 
 const projects = [
+  {
+    id: uuidv4(),
+    name: "My Own Water Website",
+    desc:
+      'Private Label Water and Custom Label Bottled Water A Mini Billboard in Your Hand!. Website: https://www.myownwater.com/',
+    img: MyOwnWater,
+  },
   {
     id: uuidv4(),
     name: "WeShare Website",
