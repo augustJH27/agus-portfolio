@@ -7,7 +7,7 @@ const ButtonStyle = styled.div`
   .button {
     font-size: 2.2rem;
     background-color: ${(props) =>
-      props.outline ? 'transperant' : 'var(--gray-1)'};
+      props.outline ? 'transparent' : 'var(--gray-1)'};
     padding: 0.7em 2em;
     border: 2px solid var(--gray-1);
     border-radius: 8px;
@@ -23,7 +23,7 @@ const ButtonStyle = styled.div`
 
 export default function Button({
   btnText = 'test',
-  btnLink = 'test',
+  btnLink = '/contact',
   outline = false,
 }) {
   return (

@@ -80,8 +80,8 @@ export default function AboutSection() {
             heading="About Me"
           />
           <PText>
-            I am a Junior Front End Developer from Indonesia. I mostly create
-            website, mini game, but sometimes I also design logo and vector.
+            I am a Junior Front End Developer from Indonesia.
+            I mostly create website, mini game, but sometimes I also design logo and vector.
             Art has always been living in my soul and that's why I always
             create something unique through my design.
           </PText>

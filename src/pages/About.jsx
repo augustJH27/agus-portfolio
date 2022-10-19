@@ -73,6 +73,7 @@ const AboutPageStyles = styled.div`
   }
 `;
 
+
 export default function About() {
   return (
     <>

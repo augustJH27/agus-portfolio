@@ -6,12 +6,13 @@ import PText from './PText';
 const FooterStyle = styled.div`
   background-color: var(--deep-dark);
   padding-top: 10rem;
+  padding-bottom: 3rem;
   .container {
     display: flex;
     gap: 3rem;
   }
   .footer__col1 {
-    flex: 2;
+    /* flex: 2; */
   }
   .footer__col2,
   .footer__col3,
