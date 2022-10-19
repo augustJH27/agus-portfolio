@@ -34,35 +34,35 @@ const projects = [
     id: uuidv4(),
     name: "Milan TV",
     desc:
-      'A movie website with Netflix vibe where user can browse and see the latest movie. This project was my mini-project at Binar Academy. Website: https://milantv-team-f.netlify.app/',
+      <div>A movie website with Netflix vibe where user can browse and see the latest movie. This project was my mini-project at Binar Academy. <a target='_blank' href='https://milantv-team-f.netlify.app/'>Website: https://milantv-team-f.netlify.app/</a></div>,
     img: MilanTV,
   },
   {
     id: uuidv4(),
     name: "Digital Clock App",
     desc:
-      'A simple digital clock app which made using HTML, CSS, and Vanilla Javascript only. Website: https://augustjh27.github.io/clock-app/',
+      <div>A simple digital clock app which made using HTML, CSS, and Vanilla Javascript only. <a target='blank' href='https://augustjh27.github.io/clock-app/'>Website: https://augustjh27.github.io/clock-app/</a></div>,
     img: Clock,
   },
   {
     id: uuidv4(),
     name: "Motorcycle Mini Game",
     desc:
-      'Press arrow up to full speed, arrow down to low speed. I made this project during my free time. Website: https://augustjh27.github.io/motorcycle-game/',
+      <div>Press arrow up to full speed, arrow down to low speed. I made this project during my free time. <a target='blank' href='https://augustjh27.github.io/motorcycle-game/'>Website: https://augustjh27.github.io/motorcycle-game/</a></div>,
     img: Motorcycle,
   },
   {
     id: uuidv4(),
     name: "Todo List App",
     desc:
-      'During my study time in Binar Academy, I had a chance to create this todo-app as a home-assignment. Website: https://todo-app-glints.netlify.app',
+      <div>During my study time in Binar Academy, I had a chance to create this todo-app as a home-assignment. <a target='blank' href='https://todo-app-glints.netlify.app/'>Website: https://todo-app-glints.netlify.app</a></div>,
     img: Todo,
   },
   {
     id: uuidv4(),
     name: "Snake Game Nokia",
     desc:
-      'Miss the legendary Snake Game on your old Nokia phone? Try this game! Website: https://augustjh27.github.io/old-snake-game/',
+    <div>Miss the legendary Snake Game on your old Nokia phone? Try this game! <a target='blank' href='https://augustjh27.github.io/old-snake-game/'>Website: https://augustjh27.github.io/old-snake-game/</a></div>,
     img: Snake,
   },
 ];
