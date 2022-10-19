@@ -87,8 +87,7 @@ export default function About() {
               <h2 className="about__heading">Junior Front End Developer</h2>
               <div className="about__info">
                 <PText>
-                  I live in Jakarta, Indonesia, the city where everyone lives
-                  in one building — they say. Since I was a kid, I knew that
+                  I live and work in Bandung. Since I was a kid, I knew that
                   art has been my very first love. I started loving art by
                   reading a book, writing poems, drawing and sketching. By the
                   time I was teen, I found that tech stuff has pulled me to
