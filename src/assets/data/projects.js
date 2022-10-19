@@ -13,21 +13,21 @@ const projects = [
     id: uuidv4(),
     name: "My Own Water Website",
     desc:
-      'Private Label Water and Custom Label Bottled Water A Mini Billboard in Your Hand!. Website: https://www.myownwater.com/',
+      <div>'Private Label Water and Custom Label Bottled Water A Mini Billboard in Your Hand! <a target='_blank' href='https://www.myownwater.com/'>Website: https://www.myownwater.com/</a></div>,
     img: MyOwnWater,
   },
   {
     id: uuidv4(),
     name: "WeShare Website",
     desc:
-      'A crowdfunding website which allows user to be a donator and charity-funder. This project was made during my study time at Binar Academy. Website: https://weshare-app.netlify.app/',
+      <div>A crowdfunding website which allows user to be a donator and charity-funder. This project was made during my study time at Binar Academy. <a target='_blank' href='https://weshare-app.netlify.app/'>Website: https://weshare-app.netlify.app/</a></div>,
     img: WeShare,
   },
   {
     id: uuidv4(),
     name: "Audiophile Website",
     desc:
-      'This is an e-Commerce website look-alike which focusing itself to sell audio stuffs only. Website: https://audiophile-glints.netlify.app/',
+      <div>This is an e-Commerce website look-alike which focusing itself to sell audio stuffs only. <a target='_blank' href='https://audiophile-glints.netlify.app/'>Website: https://audiophile-glints.netlify.app/</a></div>,
     img: Audiophile,
   },
   {
