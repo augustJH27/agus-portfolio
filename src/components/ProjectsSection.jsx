@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Button from './Button';
 import SwiperCore, { Navigation } from 'swiper';
 import ProjectItem from './ProjectItem';
 import SectionTitle from './SectionTitle';
@@ -16,6 +17,10 @@ const ProjectSectionStyle = styled.div`
     display: flex;
     gap: 3rem;
     margin-top: 5rem;
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
   }
   .swiper-container {
     padding-top: 8rem;
@@ -96,6 +101,7 @@ export default function ProjectsSection() {
             })}
           </Swiper>
         </div>
+          <Button btnText="Click this button!" btnLink="/contact" />
       </div>
     </ProjectSectionStyle>
   );

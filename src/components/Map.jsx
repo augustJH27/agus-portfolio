@@ -49,10 +49,10 @@ export default function Map() {
       <div className="container">
         <div className="map__card">
           <h3 className="map__card__heading">My location</h3>
-          <PText>Bandung, West Java, Indonesia</PText>
+          <PText>Kalibata, South Jakarta, Indonesia</PText>
           <a
             className="map__card__link"
-            href="https://www.google.com/maps/place/Jl.+Jend.+Sudirman+No.199,+Cibadak,+Kec.+Astanaanyar,+Kota+Bandung,+Jawa+Barat+40241/@-6.9202143,107.5951835,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e61870e8b4f7:0x7a815b1ca33a507a!8m2!3d-6.9202196!4d107.5973722?hl=id"
+            href="https://www.google.com/maps/place/Green+Palace+Kalibata+City+Tower+Raffles/@-6.257272,106.8483586,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f3b2d1892b39:0x93095bc521a994a0!8m2!3d-6.2572773!4d106.8509335!16s%2Fg%2F11c5s9nyyz?hl=id&entry=ttu"
             target="_blank"
             rel="noreferrer"
           >

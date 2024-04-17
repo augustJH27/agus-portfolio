@@ -21,6 +21,7 @@ const projects = [
     desc:
       <div>Innovative companies use Explo to share data and insights with their customers. Migrate from your current embedded solution to Explo in minutes. <a target='_blank' href='https://www.explo.co/'>Website: https://www.explo.co/</a></div>,
     img: Explo,
+    category: 'Websites'
   },
   {
     id: uuidv4(),
@@ -28,6 +29,7 @@ const projects = [
     desc:
       <div>Make your entire space shoppable with SpacePlace. <a target='_blank' href='https://www.spaceplace.info/'>Website: https://www.spaceplace.info/</a></div>,
     img: SpacePlace,
+    category: 'Websites'
   },
   {
     id: uuidv4(),
@@ -35,6 +37,7 @@ const projects = [
     desc:
       <div>Alkimiya is a permissionless protocol that makes the economics of the Blockspace accessible to the broader DeFi universe. <a target='_blank' href='https://alkimiya-dev.webflow.io/'>Website: https://alkimiya-dev.webflow.io/</a></div>,
     img: Alkimiya,
+    category: 'Websites',
   },
   {
     id: uuidv4(),
@@ -42,6 +45,7 @@ const projects = [
     desc:
       <div>KliknClean merupakan jasa kebersihan one stop solution yang bertujuan untuk memudahkan pelanggan dalam pembersihan rumah, apartemen, kamar kos, maupun kantor. <a target='_blank' href='https://www.kliknclean.com/'>Website: https://www.kliknclean.com/</a></div>,
     img: KliknClean,
+    category: 'Websites',
   },
   {
     id: uuidv4(),
@@ -49,6 +53,7 @@ const projects = [
     desc:
       <div>Pinduoduo is a mobile-only marketplace that connects millions of agricultural producers with consumers across China. <a target='_blank' href='https://pinduoduo-esg-microsite.webflow.io/'>Website: https://pinduoduo-esg-microsite.webflow.io/</a></div>,
     img: Pinduoduo,
+    category: 'Websites'
   },
   {
     id: uuidv4(),
@@ -56,6 +61,7 @@ const projects = [
     desc:
       <div>WealthBridge is a team of professionals who believe in using technology to deliver accurate yet cost effective solutions! <a target='_blank' href='https://www.wealthbridgecs.com/'>Website: https://www.wealthbridgecs.com/</a></div>,
     img: WealthBridge,
+    category: 'Websites'
   },
   {
     id: uuidv4(),
@@ -63,6 +69,7 @@ const projects = [
     desc:
       <div>Private Label Water and Custom Label Bottled Water A Mini Billboard in Your Hand! <a target='_blank' href='https://www.myownwater.com/'>Website: https://www.myownwater.com/</a></div>,
     img: MyOwnWater,
+    category: 'Websites',
   },
   {
     id: uuidv4(),
@@ -70,6 +77,7 @@ const projects = [
     desc:
       <div>A crowdfunding website which allows user to be a donator and charity-funder. This project was made during my study time at Binar Academy. <a target='_blank' href='https://weshare-app.netlify.app/'>Website: https://weshare-app.netlify.app/</a></div>,
     img: WeShare,
+    category: 'Websites',
   },
   {
     id: uuidv4(),
@@ -77,13 +85,7 @@ const projects = [
     desc:
       <div>This is an e-Commerce website look-alike which focusing itself to sell audio stuffs only. <a target='_blank' href='https://audiophile-glints.netlify.app/'>Website: https://audiophile-glints.netlify.app/</a></div>,
     img: Audiophile,
-  },
-  {
-    id: uuidv4(),
-    name: "Milan TV",
-    desc:
-      <div>A movie website with Netflix vibe where user can browse and see the latest movie. This project was my mini-project at Binar Academy. <a target='_blank' href='https://milantv-team-f.netlify.app/'>Website: https://milantv-team-f.netlify.app/</a></div>,
-    img: MilanTV,
+    category: 'Websites',
   },
   {
     id: uuidv4(),
@@ -91,6 +93,7 @@ const projects = [
     desc:
       <div>A simple digital clock app which made using HTML, CSS, and Vanilla Javascript only. <a target='blank' href='https://augustjh27.github.io/clock-app/'>Website: https://augustjh27.github.io/clock-app/</a></div>,
     img: Clock,
+    category: 'Mini Apps',
   },
   {
     id: uuidv4(),
@@ -98,6 +101,7 @@ const projects = [
     desc:
       <div>Press arrow up to full speed, arrow down to low speed. I made this project during my free time. <a target='blank' href='https://augustjh27.github.io/motorcycle-game/'>Website: https://augustjh27.github.io/motorcycle-game/</a></div>,
     img: Motorcycle,
+    category: 'Mini Apps',
   },
   {
     id: uuidv4(),
@@ -105,6 +109,7 @@ const projects = [
     desc:
       <div>During my study time in Binar Academy, I had a chance to create this todo-app as a home-assignment. <a target='blank' href='https://todo-app-glints.netlify.app/'>Website: https://todo-app-glints.netlify.app</a></div>,
     img: Todo,
+    category: 'Mini Apps',
   },
   {
     id: uuidv4(),
@@ -112,6 +117,7 @@ const projects = [
     desc:
     <div>Miss the legendary Snake Game on your old Nokia phone? Try this game! <a target='blank' href='https://augustjh27.github.io/old-snake-game/'>Website: https://augustjh27.github.io/old-snake-game/</a></div>,
     img: Snake,
+    category: 'Mini Apps',
   },
 ];
 

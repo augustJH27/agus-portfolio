@@ -14,6 +14,7 @@ const ButtonStyle = styled.div`
     display: inline-block;
     color: ${(props) => (props.outline ? 'var(--gary-1)' : 'black')};
   }
+
   @media only screen and (max-width: 768px) {
     .button {
       font-size: 1.8rem;
