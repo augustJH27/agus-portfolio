@@ -101,7 +101,7 @@ export default function ProjectsSection() {
             })}
           </Swiper>
         </div>
-          <Button btnText="Click this button!" btnLink="/contact" />
+          <Button btnText="See more projects" btnLink="/projects" />
       </div>
     </ProjectSectionStyle>
   );
