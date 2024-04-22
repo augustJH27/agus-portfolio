@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import MilanTV from '../images/milantv.png';
+import Weather from '../images/weather.png';
 import Audiophile from '../images/audiophile.png';
 import Clock from '../images/clockapp.png';
 import Motorcycle from '../images/motorcycle.png';
@@ -86,6 +87,22 @@ const projects = [
       <div>This is an e-Commerce website look-alike which focusing itself to sell audio stuffs only. <a target='_blank' href='https://audiophile-glints.netlify.app/'>Website: https://audiophile-glints.netlify.app/</a></div>,
     img: Audiophile,
     category: 'Websites',
+  },
+  {
+    id: uuidv4(),
+    name: "MilanTV Website",
+    desc:
+      <div>My first mini project with the BackEnd team during the Coding Bootcamp. This website was created with React, and it is using IMDB as its data-source. <a target='_blank' href='https://milantv-team-f.netlify.app/milan-tv/'>Website: https://milantv-team-f.netlify.app/milan-tv/</a></div>,
+    img: MilanTV,
+    category: 'Websites',
+  },
+  {
+    id: uuidv4(),
+    name: "Weather App",
+    desc:
+      <div>A simple Weather App made with React. This Weather App will read your location at first to automatically get the weather information around your area. Then, you can simply type the cities from all around the world through the search box to get the weather information wherever you look for. <a target='blank' href='https://agus-weather-app.netlify.app/'> Website: https://agus-weather-app.netlify.app/</a></div>,
+    img: Weather,
+    category: 'Mini Apps',
   },
   {
     id: uuidv4(),
