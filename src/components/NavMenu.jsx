@@ -146,6 +146,19 @@ export default function NavMenu() {
           </NavLink>
         </li>
         <li>
+        </li>
+        <a
+          href="https://joyagustian.blogspot.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setShowNav(!showNav)}
+          onKeyDown={() => setShowNav(!showNav)}
+          tabIndex={0}
+        role="button"
+         >
+        Blog
+        </a>
+        <li>
           <NavLink
             to="/contact"
             onClick={() => setShowNav(!showNav)}

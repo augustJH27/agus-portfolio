@@ -13,6 +13,7 @@ const FooterStyle = styled.div`
   }
   .footer__col1 {
     /* flex: 2; */
+    max-width: 400px;
   }
   .footer__col2,
   .footer__col3,
@@ -85,6 +86,11 @@ export default function Footer() {
               },
               {
                 type: 'Link',
+                title: 'Blog',
+                path: 'https://joyagustian.blogspot.com',
+              },
+              {
+                type: 'Link',
                 title: 'Contact',
                 path: '/contact',
               },
@@ -97,7 +103,7 @@ export default function Footer() {
             links={[
               {
                 title: '(+62)88801383281',
-                path: 'tel:(+62)88801383281',
+                path: 'https://wa.link/0nrqr9',
               },
               {
                 title: 'aguszohari@gmail.com',

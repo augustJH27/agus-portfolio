@@ -58,7 +58,7 @@ export default function ContactSection() {
         <SectionTitle heading="contact" subheading="how to reach me" />
         <div className="contactSection__wrapper">
           <div className="left">
-            <a href='tel:(+62)81274413945'>
+            <a href='https://wa.link/0nrqr9'>
               <ContactInfoItem icon={<MdLocalPhone />} text="(+62)88801383281" />
             </a>
             <a href='mailto:aguszohari@gmail.com'>

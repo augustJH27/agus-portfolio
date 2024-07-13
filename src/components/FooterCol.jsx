@@ -36,12 +36,12 @@ export default function FooterCol({
       <ul>
         {links.map((item, index) => (
           <li key={index}>
-            {item.type === 'Link' ? (
-              <Link to={item.path}>{item.title}</Link>
-            ) : (
-              <a href={item.path} target="_blank" rel="noreferrer">
+            {item.path.startsWith('http') ? (
+              <a href={item.path} target="_blank" rel="noopener noreferrer">
                 {item.title}
               </a>
+            ) : (
+              <Link to={item.path}>{item.title}</Link>
             )}
           </li>
         ))}
