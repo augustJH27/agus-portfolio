@@ -25,13 +25,13 @@ const SectionTitleStyle = styled.div`
 `;
 
 export default function SectionTitle({
-  subheading = 'Need Subheading',
   heading = 'need heading',
+  subheading = 'Need Subheading',
 }) {
   return (
     <SectionTitleStyle className="section-title">
-      <p>{subheading}</p>
       <h2>{heading}</h2>
+      <p>{subheading}</p>
     </SectionTitleStyle>
   );
 }

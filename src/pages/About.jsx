@@ -148,7 +148,14 @@ export default function About() {
             </div>
             <div className="about__info__item">
               <h1 className="about__info__heading">Experiences</h1>
-
+              <AboutInfoItem
+                title="2024-present"
+                items={['Virtual Assistant']}
+              />
+              <AboutInfoItem
+                title="2022-present"
+                items={['Product Manager']}
+              />
               <AboutInfoItem
                 title="2021-present"
                 items={['Junior Front End Developer']}

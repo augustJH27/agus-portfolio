@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 const FormStyle = styled.form`
   width: 100%;
@@ -43,9 +44,32 @@ export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      name,
+      email,
+      message
+    };
+
+    emailjs.send('service_ctknmns', 'template_mgo8ufp', templateParams, 'mtFBdmu_tmmaNCVbZ')
+      .then((result) => {
+        console.log(result.text);
+        setSubmitted(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
     <>
-      <FormStyle>
+      <FormStyle onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">
             Your Name
@@ -74,7 +98,6 @@ export default function ContactForm() {
           <label htmlFor="message">
             Your message
             <textarea
-              type="text"
               id="message"
               name="message"
               value={message}
@@ -83,6 +106,7 @@ export default function ContactForm() {
           </label>
         </div>
         <button type="submit">Send</button>
+        {submitted && <p>Thank you for your message!</p>}
       </FormStyle>
     </>
   );
