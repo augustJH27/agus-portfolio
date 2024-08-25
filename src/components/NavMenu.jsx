@@ -148,7 +148,7 @@ export default function NavMenu() {
         <li>
         </li>
         <a
-          href="https://joyagustian.blogspot.com/"
+          href="https://joyagustian.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setShowNav(!showNav)}

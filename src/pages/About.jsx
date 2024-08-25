@@ -107,7 +107,7 @@ export default function About() {
                   than things ever exist. 
                 </PText>
               </div>
-              {/* <Button btnText="Download CV" btnLink={process.env.PUBLIC_URL + '/CV-Agus.pdf'} download /> */}
+              <Button btnText="Download CV" btnLink="https://docs.google.com/document/d/145-fZ27991smMGc-FqvaFG8dz6ll7Isq/edit?usp=sharing&ouid=116052711513553415516&rtpof=true&sd=true" download />
               <Button btnText="Want to talk?" btnLink='/contact' />
             </div>
             <div className="right">

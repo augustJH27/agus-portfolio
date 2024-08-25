@@ -12,7 +12,6 @@ const FooterStyle = styled.div`
     gap: 3rem;
   }
   .footer__col1 {
-    /* flex: 2; */
     max-width: 400px;
   }
   .footer__col2,
@@ -87,7 +86,7 @@ export default function Footer() {
               {
                 type: 'Link',
                 title: 'Blog',
-                path: 'https://joyagustian.blogspot.com',
+                path: 'https://joyagustian.vercel.app',
               },
               {
                 type: 'Link',
@@ -97,7 +96,7 @@ export default function Footer() {
             ]}
           />
         </div>
-        <div className="footer__col3">
+        <div className="footer__col4">
           <FooterCol
             heading="Contact Info"
             links={[
