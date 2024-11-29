@@ -28,8 +28,8 @@ const projects = [
     id: uuidv4(),
     name: 'WYN2000',
     desc:
-      <div>A logistics company based in Singapore, specializes as a third-party logistics provider, offering customized solutions for transport, warehousing, and logistics management. <a target='_blank' href='https://wyn2000-staging.webflow.io/'>Website: https://wyn2000-staging.webflow.io/</a></div>,
-    img: SpacePlace,
+      <div>A logistics company based in Singapore, offering customized solutions for transport, warehousing, and logistics management. <a target='_blank' href='https://wyn2000-staging.webflow.io/'>Website: https://wyn2000-staging.webflow.io/</a></div>,
+    img: WYN2000,
     category: 'Websites'
   },
   {
