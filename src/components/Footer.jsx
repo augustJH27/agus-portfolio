@@ -86,7 +86,7 @@ export default function Footer() {
               {
                 type: 'Link',
                 title: 'Blog',
-                path: 'https://joyagustian.vercel.app',
+                path: 'https://joyagustian.com',
               },
               {
                 type: 'Link',

@@ -12,7 +12,7 @@ import WealthBridge from '../images/project-wealthbridge.png';
 import Pinduoduo from '../images/project-pdd.png';
 import KliknClean from '../images/project-kliknclean.png';
 import Alkimiya from '../images/project-alkimiya.png';
-import SpacePlace from '../images/project-spaceplace.png';
+import WYN2000 from '../images/project-wyn2000.png';
 import Explo from '../images/project-explo.png';
 
 const projects = [
@@ -26,9 +26,9 @@ const projects = [
   },
   {
     id: uuidv4(),
-    name: 'SpacePlace',
+    name: 'WYN2000',
     desc:
-      <div>Make your entire space shoppable with SpacePlace. <a target='_blank' href='https://www.spaceplace.info/'>Website: https://www.spaceplace.info/</a></div>,
+      <div>A logistics company based in Singapore, specializes as a third-party logistics provider, offering customized solutions for transport, warehousing, and logistics management. <a target='_blank' href='https://wyn2000-staging.webflow.io/'>Website: https://wyn2000-staging.webflow.io/</a></div>,
     img: SpacePlace,
     category: 'Websites'
   },
