@@ -92,7 +92,7 @@ const projects = [
     id: uuidv4(),
     name: "MilanTV Website",
     desc:
-      <div>My first mini project with the BackEnd team during the Coding Bootcamp. This website was created with React, and it is using IMDB as its data-source. <a target='_blank' href='https://milantv-team-f.netlify.app/milan-tv/'>Website: https://milantv-team-f.netlify.app/milan-tv/</a></div>,
+      <div>My first mini project with the BackEnd team during the Coding Bootcamp. This website was created with React, and it is using IMDB as its data-source. <a target='_blank' href='https://milantv-team-f.netlify.app/'>Website: https://milantv-team-f.netlify.app/</a></div>,
     img: MilanTV,
     category: 'Websites',
   },
