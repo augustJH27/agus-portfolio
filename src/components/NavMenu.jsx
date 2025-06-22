@@ -145,9 +145,18 @@ export default function NavMenu() {
             Projects
           </NavLink>
         </li>
-        <li>
+         <li>
+          <NavLink
+            to="/blog"
+            onClick={() => setShowNav(!showNav)}
+            role="button"
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
+            Blog
+          </NavLink>
         </li>
-        <a
+        {/* <a
           href="https://joyagustian.com/"
           target="_blank"
           rel="noopener noreferrer"
@@ -157,7 +166,7 @@ export default function NavMenu() {
         role="button"
          >
         Blog
-        </a>
+        </a> */}
         <li>
           <NavLink
             to="/contact"

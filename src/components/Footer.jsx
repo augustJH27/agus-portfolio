@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
         <div className="footer__col2">
           <FooterCol
-            heading="Important Links"
+            heading="Sitemaps"
             links={[
               {
                 title: 'Home',
@@ -86,7 +86,7 @@ export default function Footer() {
               {
                 type: 'Link',
                 title: 'Blog',
-                path: 'https://joyagustian.com',
+                path: '/blog',
               },
               {
                 type: 'Link',
