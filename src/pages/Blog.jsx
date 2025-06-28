@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -88,6 +89,20 @@ const Blog = () => {
   }, []);
 
   return (
+    <>
+      <Helmet>
+        <title>Agus Zohari | Blog</title>
+        <meta
+          name="description"
+          content="Read articles and inner thoughts on design trends, stories, poetry, and creative art by Agus Zohari."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://aguszohari.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Agus Zohari | Blog" />
+        <meta property="og:description" content="Read articles and inner thoughts on design trends, stories, poetry, and creative art by Agus Zohari." />
+        <meta property="og:url" content="https://aguszohari.com/blog" />
+      </Helmet>
     <BlogContainer>
       <SectionTitle
         heading='Blog'
@@ -119,6 +134,7 @@ const Blog = () => {
         ))}
       </BlogWrapper>
     </BlogContainer>
+    </>
   );
 };
 

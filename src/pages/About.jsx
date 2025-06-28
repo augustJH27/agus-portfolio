@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import React from 'react';
 import styled from 'styled-components';
 import PText from '../components/PText';
@@ -77,6 +78,19 @@ const AboutPageStyles = styled.div`
 export default function About() {
   return (
     <>
+    <Helmet>
+        <title>Agus Zohari | About</title>
+        <meta
+          name="description"
+          content="Learn more about Agus Zohari, a creative front end developer passionate about crafting digital experiences and innovative design."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://aguszohari.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Agus Zohari | About" />
+        <meta property="og:description" content="Learn more about Agus Zohari, a creative front end developer passionate about crafting digital experiences and innovative design." />
+        <meta property="og:url" content="https://aguszohari.com/about" />
+      </Helmet>
       <AboutPageStyles>
         <div className="container">
           <div className="top-section">

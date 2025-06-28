@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
@@ -121,6 +122,19 @@ const Projects = () => {
 
   return (
     <>
+    <Helmet>
+            <title>Agus Zohari | Projects</title>
+            <meta
+              name="description"
+              content="Explore selected projects by Agus Zohari, including websites, web apps, mini games, design work, and PRD that blend creativity and technology."
+            />
+            <meta name="robots" content="index, follow" />
+            <link rel="canonical" href="https://aguszohari.com/projects" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Agus Zohari | Projects" />
+            <meta property="og:description" content="Explore selected projects by Agus Zohari, including websites, web apps, mini games, design work, and PRD that blend creativity and technology." />
+            <meta property="og:url" content="https://aguszohari.com/projects" />
+          </Helmet>
       <ProjectStyle>
         <div className="container">
           <SectionTitle
