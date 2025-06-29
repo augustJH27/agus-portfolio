@@ -12,6 +12,10 @@ const Container = styled.div`
   width: 90%;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    padding: 6rem 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -23,13 +27,13 @@ const Title = styled.h2`
 const BlogTitle = styled.h4`
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Montserrat SemiBold', sans-serif;
+  font-family: "Montserrat SemiBold", sans-serif;
 `;
 
 const BlogSubTitle = styled.p`
   font-size: 12px;
   line-height: 2;
-  font-family: 'Poppins Regular', sans-serif;
+  font-family: "Poppins Regular", sans-serif;
 `;
 
 const Meta = styled.div`
@@ -71,27 +75,27 @@ const Content = styled.div`
 
   h2 {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 2rem 0 1rem;
-    font-family: 'Montserrat SemiBold', sans-serif;
+    font-family: "Montserrat Bold", sans-serif;
   }
 
   h3 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 1.75rem 0 1rem;
-    font-family: 'Montserrat SemiBold', sans-serif;
+    font-family: "Montserrat Bold", sans-serif;
   }
 
   h4 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 1.5rem 0 1rem;
   }
 
   h5 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 1.25rem 0 0.75rem;
   }
 
@@ -111,7 +115,8 @@ const Content = styled.div`
     background-color: #f9f9f9;
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 2rem;
     margin: 1rem 0;
   }
@@ -122,7 +127,7 @@ const Content = styled.div`
   }
 
   img {
-    max-width: 100%;
+    max-width: 30%;
     border-radius: 8px;
     margin: 1.5rem 0;
   }
@@ -206,9 +211,26 @@ const RecentInfo = styled.div`
   }
 `;
 
+// SINGLE CORRECT PARAGRAPH RENDERER
 const options = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+    [BLOCKS.PARAGRAPH]: (node, children) => {
+      const isEmpty =
+        !node.content ||
+        node.content.every(
+          (c) => c.nodeType === "text" && (!c.value || c.value.trim() === "")
+        );
+
+      if (isEmpty) {
+        return (
+          <p>
+            <br />
+          </p>
+        );
+      }
+
+      return <p>{children}</p>;
+    },
     [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
     [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
     [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
@@ -220,15 +242,9 @@ const options = {
     [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { file, title } = node.data.target.fields;
-      const url = file.url;
-      return (
-        <img
-          src={url}
-          alt={title || "Embedded Asset"}
-        />
-      );
-    }
-  }
+      return <img src={file.url} alt={title || "Embedded Asset"} />;
+    },
+  },
 };
 
 const BlogPage = () => {
@@ -237,24 +253,42 @@ const BlogPage = () => {
   const [morePosts, setMorePosts] = useState([]);
 
   useEffect(() => {
+    if (!slug) return;
+
     client
-      .getEntries({ content_type: "post", include: 2 })
+      .getEntries({
+        content_type: "post",
+        "fields.slug": slug,
+        include: 2,
+        limit: 1,
+      })
       .then((response) => {
-        const allPosts = response.items;
-        const currentPost = allPosts.find(
-          (item) =>
-            item.fields.title.replace(/\s+/g, "-").toLowerCase() === slug
-        );
+        if (!response.items || response.items.length === 0) {
+          console.error("No blog found for slug:", slug);
+          setBlog(null);
+          return;
+        }
+
+        const currentPost = response.items[0];
         setBlog(currentPost);
 
-        const recentOthers = allPosts
-          .filter((item) => item.sys.id !== currentPost?.sys?.id)
-          .sort(
-            (a, b) =>
-              new Date(b.fields.date).getTime() - new Date(a.fields.date).getTime()
-          )
-          .slice(0, 3);
-        setMorePosts(recentOthers);
+        client
+          .getEntries({
+            content_type: "post",
+            include: 1,
+          })
+          .then((res) => {
+            const recentOthers = res.items
+              .filter((item) => item.sys.id !== currentPost.sys.id)
+              .sort(
+                (a, b) =>
+                  new Date(b.fields.date).getTime() -
+                  new Date(a.fields.date).getTime()
+              )
+              .slice(0, 3);
+            setMorePosts(recentOthers);
+          })
+          .catch(console.error);
       })
       .catch(console.error);
   }, [slug]);
@@ -288,26 +322,28 @@ const BlogPage = () => {
         <>
           <SectionHeading>- Recent Entries -</SectionHeading>
           <RecentGrid>
-            {morePosts.map(({ fields, sys }) => {
-              const slug = fields.title.replace(/\s+/g, "-").toLowerCase();
-              const cover = fields.coverImage?.fields?.file?.url;
-              const sub = fields.subTitle;
-              const postDate = new Date(fields.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              });
-
-              return (
-                <RecentCard key={sys.id} to={`/article/${slug}`}>
-                  {cover && <RecentImage src={cover} alt={fields.title} />}
-                  <RecentInfo>
-                    <BlogTitle>{fields.title.length > 28 ? fields.title.slice(0, 25) + "..." : fields.title}</BlogTitle>
-                    <BlogSubTitle>{sub.length > 90 ? sub.slice(0, 80) + "..." : sub}</BlogSubTitle>
-                  </RecentInfo>
-                </RecentCard>
-              );
-            })}
+            {morePosts.map(({ fields, sys }) => (
+              <RecentCard key={sys.id} to={`/article/${fields.slug}`}>
+                {fields.coverImage?.fields?.file?.url && (
+                  <RecentImage
+                    src={fields.coverImage.fields.file.url}
+                    alt={fields.title}
+                  />
+                )}
+                <RecentInfo>
+                  <BlogTitle>
+                    {fields.title.length > 28
+                      ? fields.title.slice(0, 25) + "..."
+                      : fields.title}
+                  </BlogTitle>
+                  <BlogSubTitle>
+                    {fields.subTitle?.length > 90
+                      ? fields.subTitle.slice(0, 80) + "..."
+                      : fields.subTitle}
+                  </BlogSubTitle>
+                </RecentInfo>
+              </RecentCard>
+            ))}
           </RecentGrid>
         </>
       )}
