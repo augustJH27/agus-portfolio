@@ -21,14 +21,14 @@ function GTMPageView({ children }) {
   const location = useLocation();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      window.dataLayer.push({
-        event: 'pageview',
-        page: url,
-      });
-    };
-
-    handleRouteChange(location.pathname);
+    // Push a GA4-compatible pageview event to the dataLayer
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'pageview',
+      page_path: location.pathname,
+      page_location: window.location.href,
+      page_title: document.title
+    });
   }, [location]);
 
   return children;
@@ -36,34 +36,32 @@ function GTMPageView({ children }) {
 
 export default function App() {
   return (
-    <>
-      <Router>
-        <GTMPageView>
-          <NavMenu />
-          <ScrollToTop />
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/blog">
-              <Blog />
-            </Route>
-            <Route path="/article/:slug">
-              <BlogBody />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-          <Footer />
-        </GTMPageView>
-      </Router>
-    </>
+    <Router>
+      <GTMPageView>
+        <NavMenu />
+        <ScrollToTop />
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/article/:slug">
+            <BlogBody />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        <Footer />
+      </GTMPageView>
+    </Router>
   );
 }
