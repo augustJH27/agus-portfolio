@@ -64,14 +64,80 @@ const Content = styled.div`
   margin-top: 2rem;
 
   p {
-    line-height: 2;
+    line-height: 1.8;
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    font-family: 'Montserrat SemiBold', sans-serif;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 1.75rem 0 1rem;
+    font-family: 'Montserrat SemiBold', sans-serif;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 1.25rem 0 0.75rem;
+  }
+
+  h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  blockquote {
+    border-left: 4px solid #ccc;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    background-color: #f9f9f9;
+  }
+
+  ul, ol {
+    padding-left: 2rem;
+    margin: 1rem 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
   }
 
   @media only screen and (max-width: 768px) {
     p {
-      margin-bottom: 12px;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    h3 {
+      font-size: 20px;
     }
   }
 `;
@@ -85,7 +151,6 @@ const BackLink = styled(Link)`
   text-decoration: none;
 `;
 
-// Recent Entries
 const SectionHeading = styled.h3`
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -143,17 +208,27 @@ const RecentInfo = styled.div`
 
 const options = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => {
-      const isEmpty =
-        !children || children.every(child => typeof child === "string" && child.trim() === "");
-
+    [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+    [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
+    [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
+    [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
+    [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
+    [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
+    [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
+    [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+    [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+    [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      const { file, title } = node.data.target.fields;
+      const url = file.url;
       return (
-        <p style={{ marginBottom: "12px", minHeight: isEmpty ? "12px" : "unset" }}>
-          {children}
-        </p>
+        <img
+          src={url}
+          alt={title || "Embedded Asset"}
+        />
       );
-    },
-  },
+    }
+  }
 };
 
 const BlogPage = () => {
@@ -217,7 +292,6 @@ const BlogPage = () => {
               const slug = fields.title.replace(/\s+/g, "-").toLowerCase();
               const cover = fields.coverImage?.fields?.file?.url;
               const sub = fields.subTitle;
-              const authorImg = fields.author?.fields?.image?.fields?.file?.url;
               const postDate = new Date(fields.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
