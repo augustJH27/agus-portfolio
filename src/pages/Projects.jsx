@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet";
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { MdSearch } from 'react-icons/md';
-import SectionTitle from '../components/SectionTitle';
-import ProjectsInfo from '../assets/data/projects';
-import ProjectItem from '../components/ProjectItem';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { MdSearch } from "react-icons/md";
+import SectionTitle from "../components/SectionTitle";
+import ProjectsInfo from "../assets/data/projects";
+import ProjectItem from "../components/ProjectItem";
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -17,8 +17,6 @@ const ProjectStyle = styled.div`
   .projects__searchBar {
     position: relative;
     width: 320px;
-    /* border: 0.5px solid #777;
-    border-radius: 4px; */
     margin-top: 5rem;
   }
   .projects__searchBar input {
@@ -43,9 +41,9 @@ const ProjectStyle = styled.div`
     .projects__searchBar form,
     .projects__searchBar input {
       width: 100%;
-  }
     }
   }
+
   /* Styles for Tabs */
   .tabs {
     display: flex;
@@ -56,15 +54,13 @@ const ProjectStyle = styled.div`
   .tab {
     flex: 1;
     text-align: center;
-    align-content: center;
     padding: 12px;
     font-size: 16px;
-    font-family: 'Poppins Medium';
+    font-family: "Poppins Medium";
     cursor: pointer;
     background-color: #fff;
     color: var(--gray-1);
     border-radius: 5px;
-    position: relative;
   }
 
   .active {
@@ -79,30 +75,41 @@ const ProjectStyle = styled.div`
     font-size: 1.6rem;
     color: #777;
   }
+
   @media only screen and (max-width: 768px) {
     .tabs {
       margin-top: 20px;
     }
     .tab {
-      font-size: 12px; /* Adjusted font size for mobile */
+      font-size: 12px;
       padding: 10px;
     }
-  })
+  }
 `;
 
 const Projects = () => {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
   const [projectsData, setProjectsData] = useState(ProjectsInfo);
-  const [activeTab, setActiveTab] = useState('Websites');
+  const [activeTab, setActiveTab] = useState("Websites");
 
   useEffect(() => {
-    if (searchText === '') return;
-    setProjectsData(() =>
-      ProjectsInfo.filter((item) =>
-        item.name.toLowerCase().includes(searchText.toLowerCase())
-      )
+  let filteredProjects = ProjectsInfo;
+
+  if (activeTab) {
+    filteredProjects = filteredProjects.filter(
+      (item) => item.category === activeTab
     );
-  }, [searchText]);
+  }
+
+  if (searchText) {
+    filteredProjects = filteredProjects.filter((item) =>
+      item.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+  }
+
+  setProjectsData(filteredProjects);
+}, [searchText, activeTab]);
+
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
@@ -110,65 +117,69 @@ const Projects = () => {
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
-    if (tabName === 'Websites') {
-      setProjectsData(ProjectsInfo.filter((item) => item.category === 'Websites'));
+    if (tabName === "Websites") {
+      setProjectsData(
+        ProjectsInfo.filter((item) => item.category === "Websites")
+      );
     } else {
       setProjectsData(ProjectsInfo.filter((item) => item.category === tabName));
     }
-    setSearchText(''); // Reset search text when changing tabs
-  };  
+    setSearchText("");
+  };
 
   const noItemsMessage = "No items to display for this category.";
 
   return (
     <>
-    <Helmet>
-            <title>Agus Zohari | Projects</title>
-            <meta
-              name="description"
-              content="Explore selected projects by Agus Zohari, including websites, web apps, mini games, design work, and PRD that blend creativity and technology."
-            />
-            <meta name="robots" content="index, follow" />
-            <link rel="canonical" href="https://aguszohari.com/projects" />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content="Agus Zohari | Projects" />
-            <meta property="og:description" content="Explore selected projects by Agus Zohari, including websites, web apps, mini games, design work, and PRD that blend creativity and technology." />
-            <meta property="og:url" content="https://aguszohari.com/projects" />
-          </Helmet>
+      <Helmet>
+        <title>Agus Zohari | Projects</title>
+        <meta
+          name="description"
+          content="Explore selected projects by Agus Zohari, including websites, web apps, mini games, design work, and PRD that blend creativity and technology."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://aguszohari.com/projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Agus Zohari | Projects" />
+        <meta
+          property="og:description"
+          content="Explore selected projects by Agus Zohari, including websites, web apps, mini games, design work, and PRD that blend creativity and technology."
+        />
+        <meta property="og:url" content="https://aguszohari.com/projects" />
+      </Helmet>
+
       <ProjectStyle>
         <div className="container">
           <SectionTitle
             heading="Projects"
             subheading="projects i have ever done"
           />
-          {/* Tabs */}
           <div className="tabs">
             <div
-              className={`tab ${activeTab === 'Websites' ? 'active' : ''}`}
-              onClick={() => handleTabClick('Websites')}
+              className={`tab ${activeTab === "Websites" ? "active" : ""}`}
+              onClick={() => handleTabClick("Websites")}
             >
               Websites
             </div>
             <div
-              className={`tab ${activeTab === 'Mini Apps' ? 'active' : ''}`}
-              onClick={() => handleTabClick('Mini Apps')}
+              className={`tab ${activeTab === "Mini Apps" ? "active" : ""}`}
+              onClick={() => handleTabClick("Mini Apps")}
             >
               Mini Apps
             </div>
             <div
-              className={`tab ${activeTab === 'UI Design' ? 'active' : ''}`}
-              onClick={() => handleTabClick('UI Design')}
+              className={`tab ${activeTab === "UI Design" ? "active" : ""}`}
+              onClick={() => handleTabClick("UI Design")}
             >
               UI Design
             </div>
             <div
-              className={`tab ${activeTab === 'PRD' ? 'active' : ''}`}
-              onClick={() => handleTabClick('PRD')}
+              className={`tab ${activeTab === "PRD" ? "active" : ""}`}
+              onClick={() => handleTabClick("PRD")}
             >
               PRD
             </div>
           </div>
-
           <div className="projects__searchBar">
             <form>
               <input
@@ -180,8 +191,6 @@ const Projects = () => {
               <MdSearch className="searchIcon" />
             </form>
           </div>
-
-          {/* Projects */}
           <div className="projects__allItems">
             {projectsData.length === 0 ? (
               <p className="noItemsMessage">{noItemsMessage}</p>
@@ -192,6 +201,8 @@ const Projects = () => {
                   title={item.name}
                   desc={item.desc}
                   img={item.img}
+                  link={item.link}
+                  category={item.category} 
                 />
               ))
             )}

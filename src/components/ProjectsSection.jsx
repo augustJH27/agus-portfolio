@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Button from './Button';
-import SwiperCore, { Navigation } from 'swiper';
-import ProjectItem from './ProjectItem';
-import SectionTitle from './SectionTitle';
-import 'swiper/swiper-bundle.min.css';
-import projects from '../assets/data/projects';
+import React from "react";
+import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Button from "./Button";
+import SwiperCore, { Navigation } from "swiper";
+import ProjectItem from "./ProjectItem";
+import SectionTitle from "./SectionTitle";
+import "swiper/swiper-bundle.min.css";
+import projects from "../assets/data/projects";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -62,7 +62,6 @@ const ProjectSectionStyle = styled.div`
 `;
 
 export default function ProjectsSection() {
-  // console.log(projects);
   return (
     <ProjectSectionStyle>
       <div className="container">
@@ -73,35 +72,28 @@ export default function ProjectsSection() {
             slidesPerView={1}
             navigation
             breakpoints={{
-              // when window width is >= 640px
-              640: {
-                slidesPerView: 1,
-              },
-              // when window width is >= 768px
-              768: {
-                slidesPerView: 2,
-              },
-              // when window width is >= 1200px
-              1200: {
-                slidesPerView: 3,
-              },
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1200: { slidesPerView: 3 },
             }}
           >
             {projects.map((project, index) => {
-              if (index >= 5) return;
+              if (index >= 5) return null;
               return (
                 <SwiperSlide key={project.id}>
                   <ProjectItem
                     title={project.name}
                     img={project.img}
                     desc={project.desc}
+                    link={project.link}
+                    category={project.category}
                   />
                 </SwiperSlide>
               );
             })}
           </Swiper>
         </div>
-          <Button btnText="See more projects" btnLink="/projects" />
+        <Button btnText="See more projects" btnLink="/projects" />
       </div>
     </ProjectSectionStyle>
   );
