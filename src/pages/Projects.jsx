@@ -168,16 +168,16 @@ const Projects = () => {
               Mini Apps
             </div>
             <div
-              className={`tab ${activeTab === "UI Design" ? "active" : ""}`}
-              onClick={() => handleTabClick("UI Design")}
-            >
-              UI Design
-            </div>
-            <div
               className={`tab ${activeTab === "PRD" ? "active" : ""}`}
               onClick={() => handleTabClick("PRD")}
             >
               PRD
+            </div>
+            <div
+              className={`tab ${activeTab === "UI Design" ? "active" : ""}`}
+              onClick={() => handleTabClick("UI Design")}
+            >
+              UI Design
             </div>
           </div>
           <div className="projects__searchBar">

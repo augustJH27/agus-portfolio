@@ -14,6 +14,8 @@ import KliknClean from '../images/project-kliknclean.png';
 import Alkimiya from '../images/project-alkimiya.png';
 import WYN2000 from '../images/project-wyn2000.png';
 import Explo from '../images/project-explo.png';
+import carpet from '../images/prd-carpet.svg';
+import booking from '../images/prd-booking.svg';
 
 const projects = [
   {
@@ -150,6 +152,24 @@ const projects = [
     img: Snake,
     link: 'https://augustjh27.github.io/old-snake-game/',
     category: 'Mini Apps',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Carpet and Upholstery Service",
+    desc:
+    <div>The PRD of upcoming service named Carpet and Upholstery</div>,
+    img: carpet,
+    link: 'https://drive.google.com/file/d/1MrHUlJkPmUpPC6Y0nLcFVGP_eFvkUGmQ/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Booking Flow from Worker App",
+    desc:
+    <div>This feature allows the workers book other services directly to Customer through their app.</div>,
+    img: booking,
+    link: 'https://drive.google.com/file/d/1cAiz_GVxdFo2aIntGPehKEwHLkpA3tMv/view?usp=sharing',
+    category: 'PRD',
   },
 ];
 
