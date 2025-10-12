@@ -15,14 +15,30 @@ import Alkimiya from '../images/project-alkimiya.png';
 import WYN2000 from '../images/project-wyn2000.png';
 import Explo from '../images/project-explo.png';
 import carpet from '../images/prd-carpet.svg';
-import booking from '../images/prd-booking.svg';
+import flow from '../images/prd-flow.svg';
+import analytic from '../images/prd-analytic.svg';
+import attendance from '../images/prd-attendance.svg';
+import beauty from '../images/prd-beauty.svg';
+import conversion from '../images/prd-conversion.svg';
+import flash from '../images/prd-flash.svg';
+import guest from '../images/prd-guest.svg';
+import hr from '../images/prd-hr.svg';
+import income from '../images/prd-income.svg';
+import job from '../images/prd-job.svg';
+import loyalty from '../images/prd-loyalty.svg';
+import office from '../images/prd-office.svg';
+import otp from '../images/prd-otp.svg';
+import register from '../images/prd-register.svg';
+import restrict from '../images/prd-restrict.svg';
+import session from '../images/prd-session.svg';
+import upselling from '../images/prd-upselling.svg';
 
 const projects = [
   {
     id: uuidv4(),
     name: 'Explo',
     desc:
-      <div>Innovative companies use Explo to share data and insights with their customers. Migrate from your current embedded solution to Explo in minutes.</div>,
+      <div>A platform that helps companies share data and insights with customers through embedded analytics.</div>,
     img: Explo,
     link: 'https://www.explo.co/',
     category: 'Websites',
@@ -31,7 +47,7 @@ const projects = [
     id: uuidv4(),
     name: 'WYN2000',
     desc:
-      <div>A logistics company based in Singapore, offering customized solutions for transport, warehousing, and logistics management.</div>,
+      <div>Singapore-based logistics company providing tailored transport and warehouse solutions.</div>,
     img: WYN2000,
     link: 'https://wyn2000-staging.webflow.io/',
     category: 'Websites'
@@ -40,7 +56,7 @@ const projects = [
     id: uuidv4(),
     name: 'Alkimiya',
     desc:
-      <div>Alkimiya is a permissionless protocol that makes the economics of the Blockspace accessible to the broader DeFi universe.</div>,
+      <div>A decentralized protocol that opens access to Blockspace economics within the DeFi ecosystem.</div>,
     img: Alkimiya,
     link: 'https://alkimiya-dev.webflow.io/',
     category: 'Websites',
@@ -49,7 +65,7 @@ const projects = [
     id: uuidv4(),
     name: 'KliknClean',
     desc:
-      <div>KliknClean merupakan jasa kebersihan one stop solution yang bertujuan untuk memudahkan pelanggan dalam pembersihan rumah, apartemen, kamar kos, maupun kantor.</div>,
+      <div>Layanan kebersihan one-stop solution untuk rumah, apartemen, kos, dan kantor.</div>,
     img: KliknClean,
     link: 'https://www.kliknclean.com/',
     category: 'Websites',
@@ -58,7 +74,7 @@ const projects = [
     id: uuidv4(),
     name: 'Pinduoduo ESG Microsite',
     desc:
-      <div>Pinduoduo is a mobile-only marketplace that connects millions of agricultural producers with consumers across China.</div>,
+      <div>A microsite highlighting Pinduoduo’s initiatives connecting farmers with consumers across China.</div>,
     img: Pinduoduo,
     link: 'https://pinduoduo-esg-microsite.webflow.io/',
     category: 'Websites'
@@ -67,7 +83,7 @@ const projects = [
     id: uuidv4(),
     name: 'WealthBridge Corporate Services',
     desc:
-      <div>WealthBridge is a team of professionals who believe in using technology to deliver accurate yet cost effective solutions!</div>,
+      <div>Corporate service provider leveraging technology for accurate and cost-efficient solutions.</div>,
     img: WealthBridge,
     link: 'https://www.wealthbridgecs.com/',
     category: 'Websites'
@@ -76,7 +92,7 @@ const projects = [
     id: uuidv4(),
     name: "My Own Water Website",
     desc:
-      <div>Private Label Water and Custom Label Bottled Water A Mini Billboard in Your Hand!</div>,
+      <div>Private-label bottled water company offering fully customizable branding solutions.</div>,
     img: MyOwnWater,
     link: 'https://www.myownwater.com/',
     category: 'Websites',
@@ -85,7 +101,7 @@ const projects = [
     id: uuidv4(),
     name: "WeShare Website",
     desc:
-      <div>A crowdfunding website which allows user to be a donator and charity-funder. This project was made during my study time at Binar Academy.</div>,
+      <div>A crowdfunding platform enabling users to donate or fund charity projects. Built during my study at Binar Academy.</div>,
     img: WeShare,
     link: 'https://weshare-app.netlify.app/',
     category: 'Websites',
@@ -94,7 +110,7 @@ const projects = [
     id: uuidv4(),
     name: "Audiophile Website",
     desc:
-      <div>This is an e-Commerce website look-alike which focusing itself to sell audio stuffs only.</div>,
+      <div>An e-commerce concept store dedicated to high-end audio products.</div>,
     img: Audiophile,
     link: 'https://audiophile-glints.netlify.app/',
     category: 'Websites',
@@ -103,7 +119,7 @@ const projects = [
     id: uuidv4(),
     name: "MilanTV Website",
     desc:
-      <div>My first mini project with the BackEnd team during the Coding Bootcamp. This website was created with React, and it is using IMDB as its data-source.</div>,
+      <div>A React-based movie website built with IMDB API data, developed during coding bootcamp.</div>,
     img: MilanTV,
     link: 'https://milantv-team-f.netlify.app/',  
     category: 'Websites',
@@ -112,7 +128,7 @@ const projects = [
     id: uuidv4(),
     name: "Weather App",
     desc:
-      <div>A simple Weather App made with React. This Weather App will read your location at first to automatically get the weather information around your area. Then, you can simply type the cities from all around the world through the search box to get the weather information wherever you look for.</div>,
+      <div>A simple React app that provides real-time weather data based on user location or search.</div>,
     img: Weather,
     link: 'https://agus-weather-app.netlify.app/',
     category: 'Mini Apps',
@@ -121,7 +137,7 @@ const projects = [
     id: uuidv4(),
     name: "Digital Clock App",
     desc:
-      <div>A simple digital clock app which made using HTML, CSS, and Vanilla Javascript only.</div>,
+      <div>A clean digital clock built using HTML, CSS, and vanilla JavaScript.</div>,
     img: Clock,
     link: 'https://augustjh27.github.io/clock-app/',
     category: 'Mini Apps',
@@ -130,7 +146,7 @@ const projects = [
     id: uuidv4(),
     name: "Motorcycle Mini Game",
     desc:
-      <div>Press arrow up to full speed, arrow down to low speed. I made this project during my free time. </div>,
+      <div>A fun browser-based motorcycle game built for leisure using JavaScript.</div>,
     img: Motorcycle,
     link: 'https://augustjh27.github.io/motorcycle-game/',
     category: 'Mini Apps',
@@ -139,7 +155,7 @@ const projects = [
     id: uuidv4(),
     name: "Todo List App",
     desc:
-      <div>During my study time in Binar Academy, I had a chance to create this todo-app as a home-assignment.</div>,
+      <div>A simple React-based todo app created as a Binar Academy assignment.</div>,
     img: Todo,
     link: 'https://todo-app-glints.netlify.app/',
     category: 'Mini Apps',
@@ -148,7 +164,7 @@ const projects = [
     id: uuidv4(),
     name: "Snake Game Nokia",
     desc:
-    <div>Miss the legendary Snake Game on your old Nokia phone? Try this game!</div>,
+    <div>A classic remake of the iconic Snake Game from old Nokia phones.</div>,
     img: Snake,
     link: 'https://augustjh27.github.io/old-snake-game/',
     category: 'Mini Apps',
@@ -157,7 +173,7 @@ const projects = [
     id: uuidv4(),
     name: "Feature - Carpet and Upholstery Service",
     desc:
-    <div>The PRD of upcoming service named Carpet and Upholstery</div>,
+    <div>PRD detailing the new Carpet and Upholstery cleaning service offering.</div>,
     img: carpet,
     link: 'https://drive.google.com/file/d/1MrHUlJkPmUpPC6Y0nLcFVGP_eFvkUGmQ/view?usp=sharing',
     category: 'PRD',
@@ -166,9 +182,153 @@ const projects = [
     id: uuidv4(),
     name: "Feature - Booking Flow from Worker App",
     desc:
-    <div>This feature allows the workers book other services directly to Customer through their app.</div>,
-    img: booking,
+    <div>Enables workers to book customer services directly through their mobile app.</div>,
+    img: flow,
     link: 'https://drive.google.com/file/d/1cAiz_GVxdFo2aIntGPehKEwHLkpA3tMv/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Analytic Conversion",
+    desc:
+    <div>Defines a feature to track and analyze conversion data for better performance insight.</div>,
+    img: analytic,
+    link: 'https://drive.google.com/file/d/106mX-kOFpPlS8dEK5YENSAIo_RJUGbcY/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Worker Attendance",
+    desc:
+    <div>Introduces attendance tracking functionality for workers within the app.</div>,
+    img: attendance,
+    link: 'https://drive.google.com/file/d/1D9n8A1yCUj73PtmEZs0TqOS8YVaD2kWf/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Home Beauty Service",
+    desc:
+    <div>PRD for a new in-home beauty and wellness service category.</div>,
+    img: beauty,
+    link: 'https://drive.google.com/file/d/1tLJuT4YyhIns_sP5vybK7tPDu9I-27wC/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Ads' Conversion Tracking",
+    desc:
+    <div>Defines ad tracking mechanisms to measure campaign conversion performance.</div>,
+    img: conversion,
+    link: 'https://drive.google.com/file/d/18KPZKXBlJpK4UNjamCrM3_hruZo0zzHF/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Flash Sale Management Page",
+    desc:
+    <div>Outlines the admin feature for managing flash sale campaigns in-app.</div>,
+    img: flash,
+    link: 'https://drive.google.com/file/d/1ah8bAvdwvJD0redfeTnfy5EH1AXqv_Rg/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Guest Access in Client App",
+    desc:
+    <div>Allows new users to explore app features without registration.</div>,
+    img: guest,
+    link: 'https://drive.google.com/file/d/13Rj9A9HukPtLI6a1p-NTxGb2aZg2vmHJ/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Luce HR Platform",
+    desc:
+    <div>PRD for Luce SG's HR management platform. Built this from stratch with 3 engineers within 1 month.</div>,
+    img: hr,
+    link: 'https://drive.google.com/file/d/1xxyV5VKK6Mv70vVZn3yEPRTM4TNZeGLs/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Enhancement - Projected Income for Worker",
+    desc:
+    <div>Adds projected income visibility for workers within their app dashboard.</div>,
+    img: income,
+    link: 'https://drive.google.com/file/d/1FnKT-Xl1e6WFrjds4YgY2bW5C_VZNmIx/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Enhancement - Job Requests for Worker",
+    desc:
+    <div>Improves worker experience by organizing incoming job requests efficiently.</div>,
+    img: job,
+    link: 'https://drive.google.com/file/d/1nG2UQPeKk10VGSWEGOpKXACJhA17NYVH/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Customer Loyalty Program",
+    desc:
+    <div>Introduces a points-based loyalty system to reward returning customers.</div>,
+    img: loyalty,
+    link: 'https://drive.google.com/file/d/1irQI5P15v33V82Sqjd4bI6DddmDBqAsF/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Office Cleaning service",
+    desc:
+    <div>PRD outlining office cleaning service as a new business vertical.</div>,
+    img: office,
+    link: 'https://drive.google.com/file/d/1kL5iI2G5-5XOXL3uPTOAVrI3OSVhOT5d/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Login and Receive OTP Using Phone Number",
+    desc:
+    <div>Enables secure login and OTP verification via phone number.</div>,
+    img: otp,
+    link: 'https://drive.google.com/file/d/1-J0q0oj1cPR9rWNhKFqmdKEvlBq9qpaF/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Register Account Using Phone Number",
+    desc:
+    <div>Allows users to register quickly using their phone number instead of Email and Password combination.</div>,
+    img: register,
+    link: 'https://drive.google.com/file/d/1bTQ8Hke1nNoilq-SCECOvpwX-QIWmKGV/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Restrict Customer Account from Internal App",
+    desc:
+    <div>Admin control to restrict or suspend customer accounts via internal app.</div>,
+    img: restrict,
+    link: 'https://drive.google.com/file/d/1famzBmEhs1TscfuZnrOCwa8yQE92azIQ/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - First Session Reminder Via WhatsApp",
+    desc:
+    <div>Sends automated WhatsApp reminders for a customer’s first session.</div>,
+    img: session,
+    link: 'https://drive.google.com/file/d/18Yk_8H6VxR3ddFceNlXnJLX3UphzH246/view?usp=sharing',
+    category: 'PRD',
+  },
+  {
+    id: uuidv4(),
+    name: "Feature - Worker Upselling",
+    desc:
+    <div>Enables workers to recommend additional services directly to customers.</div>,
+    img: upselling,
+    link: 'https://drive.google.com/file/d/1jFNQWL29PbhwIUz4XRAc2onvFPBuZfT9/view?usp=sharing',
     category: 'PRD',
   },
 ];

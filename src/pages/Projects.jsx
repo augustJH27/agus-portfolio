@@ -93,23 +93,22 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState("Websites");
 
   useEffect(() => {
-  let filteredProjects = ProjectsInfo;
+    let filteredProjects = ProjectsInfo;
 
-  if (activeTab) {
-    filteredProjects = filteredProjects.filter(
-      (item) => item.category === activeTab
-    );
-  }
+    if (activeTab) {
+      filteredProjects = filteredProjects.filter(
+        (item) => item.category === activeTab
+      );
+    }
 
-  if (searchText) {
-    filteredProjects = filteredProjects.filter((item) =>
-      item.name.toLowerCase().includes(searchText.toLowerCase())
-    );
-  }
+    if (searchText) {
+      filteredProjects = filteredProjects.filter((item) =>
+        item.name.toLowerCase().includes(searchText.toLowerCase())
+      );
+    }
 
-  setProjectsData(filteredProjects);
-}, [searchText, activeTab]);
-
+    setProjectsData(filteredProjects);
+  }, [searchText, activeTab]);
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
@@ -202,7 +201,7 @@ const Projects = () => {
                   desc={item.desc}
                   img={item.img}
                   link={item.link}
-                  category={item.category} 
+                  category={item.category}
                 />
               ))
             )}
